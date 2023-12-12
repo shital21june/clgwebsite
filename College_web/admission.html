@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: 'Arial', sans-serif;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+      color: orangered;
+    }
+
+    table {
+      width: 100%;
+      background-color: #ecf0f1;
+      border-collapse: collapse;
+      margin-top: 15px;
+      border-radius: 8px;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="radio"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: orangered;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: darkorange;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function validate() {
+      if (document.myForm.First_Name.value == "") {
+        alert("Please provide First Name !");
+        document.myForm.First_Name.focus();
+        return false;
+      }
+
+      if (document.myForm.Last_Name.value == "") {
+        alert("Please provide Last Name !");
+        document.myForm.Last_Name.focus();
+        return false;
+      }
+
+      if (document.myForm.Mobile.value == "") {
+        alert("Please provide mobile number !!");
+        document.myForm.Mobile.focus();
+        return false;
+      }
+
+      if (document.myForm.Email.value == "") {
+        alert("Please provide valid Email !!");
+        document.myForm.Email.focus();
+        return false;
+      }
+
+      if (document.myForm.Password.value == "") {
+        alert("Please Enter Password !!");
+        document.myForm.Password.focus();
+        return false;
+      }
+
+      if (document.myForm.city.value == "") {
+        alert("Please provide city");
+        document.myForm.city.focus();
+        return false;
+      }
+
+      if (document.myForm.state.value == "") {
+        alert("Please Enter State !!");
+        document.myForm.state.focus();
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+
+<body>
+  <form action="#" name="myForm" onSubmit="return (validate())";>
+    <h3 align="center"> STUDENT ADMISSION FORM </h3>
+    <table align="center" cellpadding="9">
+      <tr>
+        <td> First Name : </td>
+        <td>
+          <input type="text" name="First_Name" placeholder="First Name" />
+        </td>
+      </tr>
+      <tr>
+        <td> Last Name : </td>
+        <td>
+          <input type="text" name="Last_Name" placeholder="Last Name" />
+        </td>
+      </tr>
+      <tr>
+        <td> Gender : </td>
+        <td> Male
+          <input type="radio" name="Gender" value="male" /> Female
+          <input type="radio" name="Gender" value="female" />
+        </td>
+      </tr>
+      <tr>
+        <td> Moblie No. </td>
+        <td>
+          <input type="text" name="Mobile" placeholder="Moblie Number" />
+        </td>
+      </tr>
+      <tr>
+        <td> Email : </td>
+        <td> <input type="text" name="Email" placeholder="Email Id" />
+        </td>
+      </tr>
+      <tr>
+        <td> Password : </td>
+        <td><input type="Password" name="Password" placeholder="Password" />
+        </td>
+      </tr>
+      <tr>
+        <td> Address : </td>
+        <td>
+          <textarea name="Address" rows="5" cols="20" placeholder="Address"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td> City :</td>
+        <td>
+          <input type="text" name="city" placeholder="City" />
+        </td>
+      </tr>
+      <tr>
+        <td> State : </td>
+        <td>
+          <input type="text" name="state" placeholder="State" />
+        </td>
+      </tr>
+      <tr>
+        <td> Country : </td>
+        <td>
+          <input type="text" name="Country" value="INDIA" readonly="readonly" />
+        </td>
+      </tr>
+      <tr>
+        <td> Select Course :</td> <br>
+        <td>
+          Computer<input type="radio" name="Course" value="Computer" />
+          Mechanical<input type="radio" name="Course" value="Mechanical" />
+          Civil<input type="radio" name="Course" value="Civil" />
+        </td>
+      </tr>
+      <tr>
+        <td align="right"> </td>
+        <td>
+          <input type="Submit" Value="Submit" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
